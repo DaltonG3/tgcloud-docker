@@ -3,6 +3,8 @@ os_name = platform.system()
 print(os_name)
 chatid = -123456789 # es. 
 maxsize = 2047 # in MB
+api_id = os.getenv('API_ID')
+api_hash = os.getenv('API_HASH')
 #api_id = '123456' #
 #api_hash = 'e123e1231231a123ee123123e123d123e'
 debug = 0 # mettere a 1 per visualizzare i log a CLI
