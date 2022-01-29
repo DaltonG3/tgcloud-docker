@@ -3,9 +3,9 @@ os_name = platform.system()
 print(os_name)
 chatid = -123456789 # es. 
 maxsize = 2047 # in MB
-api_id = '123456' #
-api_hash = 'e123e1231231a123ee123123e123d123e'
-debug = 1 # mettere a 1 per visualizzare i log a CLI
+#api_id = '123456' #
+#api_hash = 'e123e1231231a123ee123123e123d123e'
+debug = 0 # mettere a 1 per visualizzare i log a CLI
 hidden_files = 1 # will hidden files be ignored? 1 = yes 0 = no
 # il programma non considera la variazione di sistema operativo, se il backup è su linux il restore deve essere su linux, stessa cosa per windows
 if os_name == "Windows":
