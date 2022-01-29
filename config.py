@@ -15,7 +15,7 @@ if os_name == "Windows":
     cache = 'C:\\Users\\utente\\Desktop\\tg-python\\cache'
 elif os_name == "Linux":
     dirName = '/source' #senza slash finale!!
-    cache = '/cache/musica'
+    cache = '/cache'
     if not os.path.exists(cache):                  # caller handles errors
         os.mkdir(cache)                            # make dir, read/write parts
     else:
