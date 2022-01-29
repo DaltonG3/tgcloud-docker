@@ -1,7 +1,8 @@
 import platform, os
 os_name = platform.system()
 print(os_name)
-chatid = -123456789 # es. 
+#chatid = -123456789 # es. 
+chatid = os.getenv('CHATID')
 maxsize = 2047 # in MB
 api_id = os.getenv('API_ID')
 api_hash = os.getenv('API_HASH')
