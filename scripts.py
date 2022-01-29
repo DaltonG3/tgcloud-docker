@@ -227,7 +227,7 @@ def upload(elem, dimension, nomefile,digest,timestamp,epoch_localfile,dirpath_wi
 def upload_normal(elem,digest,dirpath, nomefile,epoch_localfile): #upload files < 2GB
     client.start()
     async def main():
-        result = await upload_file(client, out, nomefile, progress_callback=callback(nomefile))
+        result = await upload_file(client, out, nomefile, progress_callback=callback)
         attributes, mime_type = utils.get_attributes(elem,)
         #print("attributes==",attributes)
         #time.sleep(10)
@@ -461,8 +461,8 @@ def delete_folder(folder): # mi cancella la cache
         except Exception as e:
             print('Failed to delete %s. Reason: %s' % (file_path, e))
 
-def callback(nomefile,current, total): # def per visionare la percentuale
-    print(nomefile,' Transferred', current, 'out of', total,'bytes: {:.1%}'.format(current / total), end="\r")
+def callback(current, total): # def per visionare la percentuale
+    print('Transferred', current, 'out of', total,'bytes: {:.1%}'.format(current / total), end="\r")
 
 def get_list_of_files_present(): #ottengo la lista degli md5 locali, e aggiungo li aggiungo ad un array
     files_present = []
