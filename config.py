@@ -1,16 +1,19 @@
 import platform, os
 os_name = platform.system()
 print(os_name)
-#chatid = -123456789 # es. 
-chatid = os.getenv('CHATID')
+#chatid = -123456789 # es.
+chatid = int(os.getenv('CHATID'))
 maxsize = 2047 # in MB
-api_id = os.getenv('API_ID')
+api_id = str(os.getenv('API_ID'))
 api_hash = os.getenv('API_HASH')
+print("chatid ==", chatid)
+print("API_ID ==", api_id)
+print("API_HASH ==", api_hash)
 #api_id = '123456' #
 #api_hash = 'e123e1231231a123ee123123e123d123e'
-debug = 0 # mettere a 1 per visualizzare i log a CLI
+debug = 1 # mettere a 1 per visualizzare i log a CLI
 hidden_files = 1 # will hidden files be ignored? 1 = yes 0 = no
-# il programma non considera la variazione di sistema operativo, se il backup è su linux il restore deve essere su linux, stessa cosa per windows
+# il programma non considera la variazione di sistema operativo, se il backup        su linux il restore deve essere su linux, stessa cosa per windows
 if os_name == "Windows":
     dirName = 'C:\\Users\\utente\\Desktop\\tg-python\\input'
     cache = 'C:\\Users\\utente\\Desktop\\tg-python\\cache'
